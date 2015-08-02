@@ -83,8 +83,12 @@ void tabosc::readFromConf(QString conf){
 
 tabosc::~tabosc()
 {
-    delete ui,
-    box_osc_scene, bottombar_osc_scene, topbar_osc_scene,
-    slimbox_osc_scene, seekbar_osc_bar_scene, seekbar_osc_diamond_scene;
+    delete box_osc_scene;
+    delete bottombar_osc_scene;
+    delete topbar_osc_scene;
+    delete slimbox_osc_scene;
+    delete seekbar_osc_bar_scene;
+    delete seekbar_osc_diamond_scene;
+    delete ui;
 
 }

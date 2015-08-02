@@ -175,7 +175,13 @@ void tabsubtitle::applyFromReadConf(QMap<QString, QString>* conf){
 
 tabsubtitle::~tabsubtitle()
 {
-    delete ui, subtitleSettings, manualPages, colorPickerFontColor,
-            colorPickerBorderColor, colorPickerShadowColor, subtitleScene,
-            testShadow, testSubtitle;
+    delete subtitleSettings;
+    delete manualPages;
+    delete colorPickerFontColor;
+    delete colorPickerBorderColor;
+    delete colorPickerShadowColor;
+    delete testShadow;
+    delete testSubtitle;
+    delete subtitleScene;
+    delete ui;
 }

@@ -80,5 +80,7 @@ void tabWindow::applyFromReadConf(QMap<QString, QString>* conf){
 
 tabWindow::~tabWindow()
 {
-    delete ui, windowSettings, manualPages;
+    delete windowSettings;
+    delete manualPages;
+    delete ui;
 }

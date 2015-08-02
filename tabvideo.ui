@@ -74,7 +74,7 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>110</x>
      <y>200</y>
      <width>751</width>
      <height>740</height>
@@ -293,7 +293,7 @@
    <widget class="QLabel" name="label_gamma">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>410</x>
       <y>20</y>
       <width>59</width>
       <height>16</height>
@@ -306,7 +306,7 @@
    <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>400</x>
       <y>40</y>
       <width>121</width>
       <height>16</height>
@@ -320,7 +320,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>350</y>
+      <y>320</y>
       <width>59</width>
       <height>16</height>
      </rect>
@@ -333,7 +333,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>370</y>
+      <y>340</y>
       <width>121</width>
       <height>16</height>
      </rect>
@@ -632,9 +632,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>380</y>
-      <width>301</width>
-      <height>392</height>
+      <y>350</y>
+      <width>291</width>
+      <height>231</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout_2">
@@ -642,7 +642,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
      <property name="horizontalSpacing">
-      <number>30</number>
+      <number>15</number>
      </property>
      <property name="verticalSpacing">
       <number>-1</number>
@@ -824,32 +824,15 @@
        </item>
       </widget>
      </item>
-     <item row="8" column="0">
-      <widget class="QCheckBox" name="box_panscan">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>panscan</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="QLineEdit" name="value_panscan">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="formLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>50</y>
-      <width>311</width>
-      <height>323</height>
+      <x>390</x>
+      <y>60</y>
+      <width>301</width>
+      <height>221</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout_3">
@@ -967,6 +950,23 @@
        </property>
       </widget>
      </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="button_browse_icc_profile">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Browse...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QCheckBox" name="box_icc_profile_auto">
+       <property name="text">
+        <string>icc-profile-auto</string>
+       </property>
+      </widget>
+     </item>
      <item row="7" column="0">
       <widget class="QCheckBox" name="box_fbo_format">
        <property name="accessibleName">
@@ -1047,32 +1047,15 @@
        </item>
       </widget>
      </item>
-     <item row="4" column="1">
-      <widget class="QPushButton" name="button_browse_icc_profile">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Browse...</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QCheckBox" name="box_icc_profile_auto">
-       <property name="text">
-        <string>icc-profile-auto</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="formLayoutWidget_4">
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>380</y>
+      <y>350</y>
       <width>361</width>
-      <height>315</height>
+      <height>251</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout_4">
@@ -1088,14 +1071,14 @@
      <property name="topMargin">
       <number>10</number>
      </property>
-     <item row="0" column="0">
+     <item row="1" column="0">
       <widget class="QCheckBox" name="box_deinterlace">
        <property name="text">
         <string>deinterlace</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
+     <item row="1" column="1">
       <widget class="QComboBox" name="deinterlace_combobox">
        <property name="enabled">
         <bool>false</bool>
@@ -1120,14 +1103,14 @@
        </item>
       </widget>
      </item>
-     <item row="1" column="0">
+     <item row="2" column="0">
       <widget class="QCheckBox" name="box_fielddominance">
        <property name="text">
         <string>field-dominance</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
+     <item row="2" column="1">
       <widget class="QComboBox" name="fielddominance_combobox">
        <property name="enabled">
         <bool>false</bool>
@@ -1152,56 +1135,56 @@
        </item>
       </widget>
      </item>
-     <item row="2" column="0">
+     <item row="3" column="0">
       <widget class="QCheckBox" name="box_video_aspect">
        <property name="text">
         <string>video-aspect</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
+     <item row="3" column="1">
       <widget class="QLineEdit" name="value_video_aspect">
        <property name="enabled">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
+     <item row="4" column="0">
       <widget class="QCheckBox" name="box_no_video_aspect_2">
        <property name="text">
         <string>no-video-aspect</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
+     <item row="5" column="0">
       <widget class="QCheckBox" name="box_video_stereo_mode">
        <property name="text">
         <string>video-stereo-mode</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="1">
+     <item row="5" column="1">
       <widget class="QLineEdit" name="value_video_stereo_mode">
        <property name="enabled">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="5" column="0">
+     <item row="6" column="0">
       <widget class="QCheckBox" name="box_source_shader">
        <property name="text">
         <string>source-shader</string>
        </property>
       </widget>
      </item>
-     <item row="5" column="1">
+     <item row="6" column="1">
       <widget class="QLineEdit" name="value_source_shader">
        <property name="enabled">
         <bool>false</bool>
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
+     <item row="7" column="1">
       <widget class="QPushButton" name="button_browse_source_shader">
        <property name="enabled">
         <bool>false</bool>
@@ -1211,8 +1194,36 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="0">
+      <widget class="QCheckBox" name="box_panscan">
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>panscan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="value_panscan">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
+   <zorder>label_scaling</zorder>
+   <zorder>line</zorder>
+   <zorder>label_gamma</zorder>
+   <zorder>line_2</zorder>
+   <zorder>label_misc</zorder>
+   <zorder>line_3</zorder>
+   <zorder>formLayoutWidget</zorder>
+   <zorder>formLayoutWidget_2</zorder>
+   <zorder>formLayoutWidget_3</zorder>
+   <zorder>formLayoutWidget_4</zorder>
+   <zorder>video_settings_direct3d</zorder>
   </widget>
   <zorder>video_settings_opengl</zorder>
   <zorder>textEdit</zorder>

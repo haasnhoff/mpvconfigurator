@@ -15,5 +15,6 @@ tabconfig::tabconfig(QWidget *parent) :
 
 tabconfig::~tabconfig()
 {
-    delete ui, logoScene;
+    delete logoScene;
+    delete ui;
 }

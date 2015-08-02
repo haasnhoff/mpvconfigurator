@@ -145,7 +145,12 @@ void tabosd::applyFromReadConf(QMap<QString, QString>* conf){
 
 tabosd::~tabosd()
 {
-    delete ui, manualPages, osdSettings,
-        colorPickerFontColor, colorPickerBorderColor,
-        colorPickerShadowColor, colorPickerBackColor;
+    delete colorPickerFontColor;
+    delete colorPickerBorderColor;
+    delete colorPickerShadowColor;
+    delete colorPickerBackColor;
+    delete manualPages;
+    delete osdSettings;
+    delete ui;
+
 }

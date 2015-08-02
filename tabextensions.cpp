@@ -74,5 +74,6 @@ void tabExtensions::parseToConf(QStringList* conf){
 
 tabExtensions::~tabExtensions()
 {
-    delete ui, settingMap;
+    delete settingMap;
+    delete ui;
 }

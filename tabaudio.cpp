@@ -30,11 +30,10 @@ tabaudio::tabaudio(QWidget *parent) :
     connect(ui->radio_preset_wasapi, SIGNAL(clicked(bool)), this, SLOT(changeDriver(bool)));
 
     // General settings.
-    addAudioSetting(ui->box_audio_pitch_correction);
+    addAudioSetting(ui->comboBox_audio_pitch, ui->box_audio_pitch_correction);
     addAudioSetting(ui->value_audio_device, ui->box_audio_device);
     addAudioSetting(ui->value_volume, ui->box_volume);
     addAudioSetting(ui->value_audio_delay, ui->box_audio_delay);
-    addAudioSetting(ui->box_no_audio);
     addAudioSetting(ui->comboBox_mute, ui->box_mute);
     addAudioSetting(ui->comboBox_softvol, ui->box_softvol);
     addAudioSetting(ui->box_no_softvol);
@@ -279,5 +278,8 @@ void tabaudio::readAOLine(QString readAO){
 
 tabaudio::~tabaudio()
 {
-    delete ui, audioSettings, aoSettings, manualPages;
+    delete audioSettings;
+    delete aoSettings;
+    delete manualPages;
+    delete ui;
 }

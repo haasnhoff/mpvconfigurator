@@ -191,5 +191,7 @@ void tabScreenshot::browseForScreenshotFolder(){
 
 tabScreenshot::~tabScreenshot()
 {
-    delete ui, screenshotSettings, manualPages;
+    delete screenshotSettings;
+    delete manualPages;
+    delete ui;
 }

@@ -266,5 +266,8 @@ void tabVideo::readVOLine(QString readVO){
 }
 
 tabVideo::~tabVideo() {
-    delete ui, voSettings, videoSettings, manualPages;
+    delete voSettings;
+    delete videoSettings;
+    delete manualPages;
+    delete ui;
 }

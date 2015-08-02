@@ -19,7 +19,17 @@ Currently, mpv Configurator is in beta. This means it's not very optimized and m
 
 ## Downloads
 
-Pre-compiled zips are coming soon™.
+Pre-compiled binaries for mpv Configurator Beta 0.1:
+
+Windows: ![https://drive.google.com/file/d/0B0wpFgllrtRCaFZEWnpQckh2Qm8/view?usp=sharing](Download)
+OS X: ![https://drive.google.com/file/d/0B0wpFgllrtRCVThxTzRyczFLTGs/view?usp=sharing](Download)
+GNU/Linux: ![https://drive.google.com/file/d/0B0wpFgllrtRCdXF0RU0tdkkzUGs/view?usp=sharing](Download)
+
+Note for GNU/Linux users:
+
+While the GNU/Linux version of mpv Configurator worked out of the box on a Ubuntu 14.04 live CD without modifications or required downloads, GNU/Linux has very special deployment methods thus it might not work OOB in all distributions. If it gives off a segfault or require dependencies, you'll need to download the required libraries, whatever they might be. Try ldd and see what is missing.
+
+I might statically build the GNU/Linux binary later on for easier deployment, but if you keep having problems with it, please download Qt5 and compile it yourself. I am painfully aware of how stupid this is, but deploying shared library Qt applications on GNU/Linux are a pain in the ass, sorry.
 
 ## FAQ:
 
@@ -31,17 +41,13 @@ No.
 
 This is a very well known problem. Might be fixed later on.
 
-**Your shit has memory leaks, get real!**
+**Some tooltips aren't working as inteded. Comboboxes should have tooltips.**
 
-B-But it's just a beta. Yes, this is a known issue.
+This is known.
 
 **Your code is absolutely horrible, please commit suicide.**
 
 This is my second "major" C++ project, please bear with me. 
-
-**Some tooltips aren't working as inteded. Comboboxes should have tooltips instead of tooltips that look like walls of text**
-
-This is known.
 
 **Where is the documentation?**
 

@@ -56,8 +56,9 @@ void MainWindow::deleteAllSettings(bool withMessage){
 
     ui->tabWidget->clear();
 
-    delete tabConfig, tabvideo, tabAudio, tabSubtitle, tabOSC, tabOSD,
-            tabscreenshot, tabwindow, tabmisc, tabextensions, tabunknown;
+    delete tabAudio; delete tabConfig; delete tabextensions;
+    delete tabmisc; delete tabOSC; delete tabOSD; delete tabscreenshot;
+    delete tabSubtitle; delete tabunknown; delete tabvideo; delete tabwindow;
 
     tabConfig = new tabconfig();
     tabvideo = new tabVideo();
@@ -219,10 +220,10 @@ void MainWindow::readFullConf(){
 }
 
 MainWindow::~MainWindow()
-{
-    delete tabAudio, tabConfig, tabextensions, tabmisc,
-            tabOSC, tabOSD, tabscreenshot, tabSubtitle,
-            tabunknown, tabvideo, tabwindow;
+{   // Cannot be comma'd due to operator precedence.
+    delete tabAudio; delete tabConfig; delete tabextensions;
+    delete tabmisc; delete tabOSC; delete tabOSD; delete tabscreenshot;
+    delete tabSubtitle; delete tabunknown; delete tabvideo; delete tabwindow;
     delete savedConf;
     delete ui;
 }

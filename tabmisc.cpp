@@ -83,5 +83,7 @@ void tabMisc::applyFromReadConf(QMap<QString, QString>* conf){
 
 tabMisc::~tabMisc()
 {
-    delete ui, miscSettings, manualPages;
+    delete miscSettings;
+    delete manualPages;
+    delete ui;
 }
