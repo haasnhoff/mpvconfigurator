@@ -1,4 +1,4 @@
-![http://mpv.io/](https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/mpv-logo-128.png)
+![http://mpv.io/](https://raw.githubusercontent.com/haasnhoff/mpvconfigurator/master/images/icon.png)
 
 ## mpv Configurator
 
