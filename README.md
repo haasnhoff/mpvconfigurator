@@ -23,22 +23,28 @@ Pre-compiled zips are coming soon™.
 
 ## FAQ:
 
-**Are you affiliated with the mpv guys?
+**Are you affiliated with the mpv guys?**
+
 No.
 
 **Your GUI looks like shit in [platform], it doesn't even scale and is hard to use on my 1024x600 screen.**
+
 This is a very well known problem. Might be fixed later on.
 
 **Your shit has memory leaks, get real!**
+
 B-But it's just a beta. Yes, this is a known issue.
 
 **Your code is absolutely horrible, please commit suicide.**
+
 This is my second "major" C++ project, please bear with me. 
 
 **Some tooltips aren't working as inteded. Comboboxes should have tooltips instead of tooltips that look like walls of text**
+
 This is known.
 
 **Where is the documentation?**
+
 Under construction.
 
 ## Bug reports
