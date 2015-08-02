@@ -21,9 +21,9 @@ Currently, mpv Configurator is in beta. This means it's not very optimized and m
 
 Pre-compiled binaries for mpv Configurator Beta 0.1:
 
-Windows: ![https://drive.google.com/file/d/0B0wpFgllrtRCaFZEWnpQckh2Qm8/view?usp=sharing](Download)
-OS X: ![https://drive.google.com/file/d/0B0wpFgllrtRCVThxTzRyczFLTGs/view?usp=sharing](Download)
-GNU/Linux: ![https://drive.google.com/file/d/0B0wpFgllrtRCdXF0RU0tdkkzUGs/view?usp=sharing](Download)
+Windows: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCaFZEWnpQckh2Qm8/view?usp=sharing)
+OS X: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCVThxTzRyczFLTGs/view?usp=sharing)
+GNU/Linux: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCdXF0RU0tdkkzUGs/view?usp=sharing)
 
 Note for GNU/Linux users:
 
