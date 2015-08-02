@@ -1,0 +1,2 @@
+# mpvconfigurator
+mpv Configurator
