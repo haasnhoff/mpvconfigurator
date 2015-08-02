@@ -22,10 +22,12 @@ Currently, mpv Configurator is in beta. This means it's not very optimized and m
 Pre-compiled binaries for mpv Configurator Beta 0.1:
 
 Windows: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCaFZEWnpQckh2Qm8/view?usp=sharing)
+
 OS X: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCVThxTzRyczFLTGs/view?usp=sharing)
+
 GNU/Linux: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCdXF0RU0tdkkzUGs/view?usp=sharing)
 
-Note for GNU/Linux users:
+**Note for GNU/Linux users:**
 
 While the GNU/Linux version of mpv Configurator worked out of the box on a Ubuntu 14.04 live CD without modifications or required downloads, GNU/Linux has very special deployment methods thus it might not work OOB in all distributions. If it gives off a segfault or require dependencies, you'll need to download the required libraries, whatever they might be. Try ldd and see what is missing.
 
