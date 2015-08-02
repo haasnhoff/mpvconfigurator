@@ -19,13 +19,9 @@ Currently, mpv Configurator is in beta. This means it's not very optimized and m
 
 ## Downloads
 
-Pre-compiled binaries for mpv Configurator Beta 0.1:
+Pre-compiled binaries for mpv Configurator can be found in the [releases section](https://github.com/haasnhoff/mpvconfigurator/releases)
 
-Windows: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCaFZEWnpQckh2Qm8/view?usp=sharing)
-
-OS X: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCVThxTzRyczFLTGs/view?usp=sharing)
-
-GNU/Linux: [Download](https://drive.google.com/file/d/0B0wpFgllrtRCdXF0RU0tdkkzUGs/view?usp=sharing)
+Currently only betas are available. The configurator will be slated for 1.0 release when it has been properly tested, updating manuals feature, scaling UI are added and tooltips are fixed.
 
 **Note for GNU/Linux users:**
 
