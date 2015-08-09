@@ -16,1222 +16,1166 @@
   <property name="windowTitle">
    <string>mpv Configurator - Video</string>
   </property>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>40</y>
-     <width>691</width>
-     <height>79</height>
-    </rect>
-   </property>
-   <property name="readOnly">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_current_string">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>10</y>
-     <width>121</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Current VO String: </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_preset">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>140</y>
-     <width>59</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_video_output">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>140</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Video Output Driver:</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="video_settings_direct3d" native="true">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>200</y>
-     <width>751</width>
-     <height>740</height>
-    </rect>
-   </property>
-   <property name="sizeIncrement">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
-   </property>
-   <widget class="QWidget" name="formLayoutWidget_5">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>371</width>
-      <height>301</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_5">
-     <property name="labelAlignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_current_string">
+     <property name="text">
+      <string>Current VO String: </string>
      </property>
-     <property name="horizontalSpacing">
-      <number>15</number>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>100</height>
+      </size>
      </property>
-     <property name="verticalSpacing">
-      <number>-1</number>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
-     <property name="topMargin">
-      <number>10</number>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_video_output">
+     <property name="text">
+      <string>Video Output Driver:</string>
      </property>
-     <item row="0" column="0">
-      <widget class="QCheckBox" name="box_prefer_stretchrect">
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QRadioButton" name="radio_preset_opengl">
        <property name="text">
-        <string>prefer-stretchrect</string>
+        <string>opengl</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QCheckBox" name="box_disablestretchrect">
+     <item>
+      <widget class="QRadioButton" name="radio_preset_openglhq">
        <property name="text">
-        <string>disable-stretchrect</string>
+        <string>opengl-hq</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="box_disable_textures">
+     <item>
+      <widget class="QRadioButton" name="radio_preset_direct3d">
        <property name="text">
-        <string>disable-textures</string>
+        <string>direct3d</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QCheckBox" name="box_disable_shaders">
+     <item>
+      <widget class="QRadioButton" name="radio_preset_direct3d_shaders">
        <property name="text">
-        <string>disable-shaders</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QCheckBox" name="box_only_8_bit">
-       <property name="text">
-        <string>only-8bit</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QCheckBox" name="box_disable_texture_align">
-       <property name="text">
-        <string>disable-texture-align</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QCheckBox" name="box_force_power_of_2">
-       <property name="text">
-        <string>force-power-of-2</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QCheckBox" name="box_texture_memory">
-       <property name="text">
-        <string>texture-memory</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QComboBox" name="texture_memory_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="editable">
-        <bool>false</bool>
-       </property>
-       <property name="currentText">
-        <string>default</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>default</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>default-pool</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>default-pool-shadow</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>managed</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>scratch</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>swap-discard</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>exact-backbuffer</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>160</y>
-     <width>551</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QRadioButton" name="radio_preset_opengl">
-      <property name="text">
-       <string>opengl</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="radio_preset_openglhq">
-      <property name="text">
-       <string>opengl-hq</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="radio_preset_direct3d">
-      <property name="text">
-       <string>direct3d</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QRadioButton" name="radio_preset_direct3d_shaders">
-      <property name="text">
-       <string>direct3d_shaders</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="video_settings_opengl" native="true">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>190</y>
-     <width>751</width>
-     <height>701</height>
-    </rect>
-   </property>
-   <widget class="QLabel" name="label_scaling">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>59</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Scaling:</string>
-    </property>
-   </widget>
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>40</y>
-      <width>121</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_gamma">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>20</y>
-      <width>59</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Color:</string>
-    </property>
-   </widget>
-   <widget class="Line" name="line_2">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>40</y>
-      <width>121</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_misc">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>320</y>
-      <width>59</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Misc:</string>
-    </property>
-   </widget>
-   <widget class="Line" name="line_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>340</y>
-      <width>121</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>50</y>
-      <width>351</width>
-      <height>271</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout">
-     <property name="labelAlignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-     <property name="horizontalSpacing">
-      <number>30</number>
-     </property>
-     <property name="verticalSpacing">
-      <number>-1</number>
-     </property>
-     <property name="topMargin">
-      <number>20</number>
-     </property>
-     <item row="0" column="0">
-      <widget class="QCheckBox" name="box_scale">
-       <property name="text">
-        <string>scale</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="scaler_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>bilinear</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>spline36</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczossharp</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>mitchell</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>oversample</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QCheckBox" name="box_dscale">
-       <property name="text">
-        <string>dscale</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QComboBox" name="dscale_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>bilinear</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>spline36</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczossharp</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>mitchell</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>oversample</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="box_cscale">
-       <property name="text">
-        <string>cscale</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QComboBox" name="cscale_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>bilinear</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>spline36</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczossharp</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>mitchell</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>oversample</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QCheckBox" name="box_tscale">
-       <property name="text">
-        <string>tscale</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QComboBox" name="tscale_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>bilinear</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>spline36</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczos</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ewa_lanczossharp</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>mitchell</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>oversample</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QCheckBox" name="box_scale_radius">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>scale-radius</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QLineEdit" name="value_scale_radius">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QCheckBox" name="box_scale_antiring">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>scale-antiring</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="value_scale_antiring">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QCheckBox" name="box_scale_resizes_only">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>scaler-resizes-only</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QCheckBox" name="box_fancy_downscaling">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>fancy-downscaling</string>
+        <string>direct3d_shaders</string>
        </property>
       </widget>
      </item>
     </layout>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>350</y>
-      <width>291</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_2">
-     <property name="labelAlignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-     <property name="horizontalSpacing">
-      <number>15</number>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
      </property>
-     <property name="verticalSpacing">
-      <number>-1</number>
-     </property>
-     <property name="topMargin">
-      <number>10</number>
-     </property>
-     <item row="0" column="0">
-      <widget class="QCheckBox" name="box_pbo">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>pbo</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QCheckBox" name="box_dither_depth">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>dither-depth</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="value_dither_depth">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="box_temporal_dither">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>temporal-dither</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QCheckBox" name="box_interpolation">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>interpolation</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QCheckBox" name="box_waitvsync">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>waitvsync</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QCheckBox" name="box_framedrop_mode">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>framedrop</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QComboBox" name="framedrop_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>no</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>vo</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>decoder</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>decoder+vo</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QCheckBox" name="box_display_fps">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>display-fps</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="value_display_fps">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QCheckBox" name="box_hwdec">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>hwdec</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QComboBox" name="hwdec_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>no</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>auto</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>vdpau</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>vaapi</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>vaapi-copy</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>vda</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>dxva2-copy</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rpi</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>60</y>
-      <width>301</width>
-      <height>221</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_3">
-     <property name="labelAlignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-     <property name="horizontalSpacing">
-      <number>30</number>
-     </property>
-     <property name="verticalSpacing">
-      <number>-1</number>
-     </property>
-     <property name="topMargin">
-      <number>10</number>
-     </property>
-     <item row="0" column="0">
-      <widget class="QCheckBox" name="box_gamma">
-       <property name="text">
-        <string>gamma</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="value_gamma">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QCheckBox" name="box_gamma_auto">
-       <property name="text">
-        <string>gamma-auto</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="box_target_prim">
-       <property name="text">
-        <string>target-prim</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QComboBox" name="target_prim_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>auto</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>bt.470m</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>bt.601-525</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>bt.601-625</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>bt.709</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>bt.2020</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>apple</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>adobe</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>prophoto</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>cie1931</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QCheckBox" name="box_icc_profile">
-       <property name="text">
-        <string>icc-profile</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="value_icc_profile">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QPushButton" name="button_browse_icc_profile">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Browse...</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QCheckBox" name="box_icc_profile_auto">
-       <property name="text">
-        <string>icc-profile-auto</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="QCheckBox" name="box_fbo_format">
-       <property name="accessibleName">
-        <string>fbo-format=&lt;fmt&gt;</string>
-       </property>
-       <property name="text">
-        <string>fbo-format</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QComboBox" name="fbo_format_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>rgb</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgba</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgb8</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgb10</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgb10_a2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgb16</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgb16f</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgb32f</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgba12</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgba16</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgba16f</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>rgba32f</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="formLayoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>350</y>
-      <width>361</width>
-      <height>251</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_4">
-     <property name="labelAlignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-     <property name="horizontalSpacing">
-      <number>30</number>
-     </property>
-     <property name="verticalSpacing">
-      <number>-1</number>
-     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_2">
      <property name="topMargin">
       <number>10</number>
      </property>
      <item row="1" column="0">
-      <widget class="QCheckBox" name="box_deinterlace">
-       <property name="text">
-        <string>deinterlace</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QComboBox" name="deinterlace_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>yes</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>no</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>auto</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="box_fielddominance">
-       <property name="text">
-        <string>field-dominance</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QComboBox" name="fielddominance_combobox">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>auto</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>top</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>bottom</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QCheckBox" name="box_video_aspect">
-       <property name="text">
-        <string>video-aspect</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="value_video_aspect">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QCheckBox" name="box_no_video_aspect_2">
-       <property name="text">
-        <string>no-video-aspect</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QCheckBox" name="box_video_stereo_mode">
-       <property name="text">
-        <string>video-stereo-mode</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="value_video_stereo_mode">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QCheckBox" name="box_source_shader">
-       <property name="text">
-        <string>source-shader</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="value_source_shader">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QPushButton" name="button_browse_source_shader">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Browse...</string>
-       </property>
+      <widget class="QWidget" name="video_settings_opengl" native="true">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="2" column="2">
+         <layout class="QGridLayout" name="gridLayout_6">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>30</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>-1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_gamma">
+            <property name="text">
+             <string>Color:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Line" name="line_2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="box_gamma">
+            <property name="text">
+             <string>gamma</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="value_gamma">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="box_gamma_auto">
+            <property name="text">
+             <string>gamma-auto</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="box_target_prim">
+            <property name="text">
+             <string>target-prim</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="target_prim_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>auto</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>bt.470m</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>bt.601-525</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>bt.601-625</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>bt.709</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>bt.2020</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>apple</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>adobe</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>prophoto</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cie1931</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="box_icc_profile">
+            <property name="text">
+             <string>icc-profile</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="value_icc_profile">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QPushButton" name="button_browse_icc_profile">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Browse...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="box_icc_profile_auto">
+            <property name="text">
+             <string>icc-profile-auto</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QCheckBox" name="box_fbo_format">
+            <property name="accessibleName">
+             <string>fbo-format=&lt;fmt&gt;</string>
+            </property>
+            <property name="text">
+             <string>fbo-format</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QComboBox" name="fbo_format_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>rgb</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgba</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgb8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgb10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgb10_a2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgb16</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgb16f</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgb32f</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgba12</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgba16</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgba16f</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rgba32f</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>15</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>-1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_misc">
+            <property name="text">
+             <string>Misc:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Line" name="line_3">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="box_pbo">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>pbo</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="box_dither_depth">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>dither-depth</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="value_dither_depth">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="box_temporal_dither">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>temporal-dither</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="box_interpolation">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>interpolation</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="box_waitvsync">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>waitvsync</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="box_framedrop_mode">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>framedrop</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QComboBox" name="framedrop_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>no</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>vo</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>decoder</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>decoder+vo</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QCheckBox" name="box_display_fps">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>display-fps</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLineEdit" name="value_display_fps">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QCheckBox" name="box_hwdec">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>hwdec</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QComboBox" name="hwdec_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>no</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>auto</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>vdpau</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>vaapi</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>vaapi-copy</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>vda</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>dxva2-copy</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>rpi</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" rowspan="2">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>30</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>-1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_scaling">
+            <property name="text">
+             <string>Scaling:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Line" name="line">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="box_scale">
+            <property name="text">
+             <string>scale</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="scaler_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>bilinear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>spline36</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczossharp</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mitchell</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>oversample</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="box_dscale">
+            <property name="text">
+             <string>dscale</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="dscale_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>bilinear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>spline36</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczossharp</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mitchell</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>oversample</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="box_cscale">
+            <property name="text">
+             <string>cscale</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="cscale_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>bilinear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>spline36</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczossharp</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mitchell</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>oversample</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="box_tscale">
+            <property name="text">
+             <string>tscale</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QComboBox" name="tscale_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>bilinear</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>spline36</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ewa_lanczossharp</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>mitchell</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>oversample</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="box_scale_radius">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>scale-radius</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="value_scale_radius">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="box_scale_antiring">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>scale-antiring</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="value_scale_antiring">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QCheckBox" name="box_scale_resizes_only">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>scaler-resizes-only</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QCheckBox" name="box_fancy_downscaling">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>fancy-downscaling</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="2">
+         <layout class="QGridLayout" name="gridLayout_7">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>30</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>-1</number>
+          </property>
+          <item row="9" column="1">
+           <widget class="QPushButton" name="button_browse_source_shader">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Browse...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="box_no_video_aspect_2">
+            <property name="text">
+             <string>no-video-aspect</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLineEdit" name="value_source_shader">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QCheckBox" name="box_source_shader">
+            <property name="text">
+             <string>source-shader</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="fielddominance_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>auto</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>top</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>bottom</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="value_video_stereo_mode">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="box_panscan">
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="text">
+             <string>panscan</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="value_panscan">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="box_deinterlace">
+            <property name="text">
+             <string>deinterlace</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="box_video_stereo_mode">
+            <property name="text">
+             <string>video-stereo-mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="value_video_aspect">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="box_video_aspect">
+            <property name="text">
+             <string>video-aspect</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="box_fielddominance">
+            <property name="text">
+             <string>field-dominance</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="deinterlace_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>yes</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>no</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>auto</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_misc_2">
+            <property name="text">
+             <string>Misc:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Line" name="line_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+       <zorder>formLayoutWidget</zorder>
+       <zorder>formLayoutWidget_2</zorder>
+       <zorder>formLayoutWidget_3</zorder>
+       <zorder>formLayoutWidget_4</zorder>
+       <zorder>video_settings_direct3d</zorder>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QCheckBox" name="box_panscan">
-       <property name="statusTip">
-        <string/>
-       </property>
-       <property name="text">
-        <string>panscan</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="value_panscan">
+      <widget class="QWidget" name="video_settings_direct3d" native="true">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
+       <property name="sizeIncrement">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_8">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>500</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>-1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="box_prefer_stretchrect">
+            <property name="text">
+             <string>prefer-stretchrect</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="box_disablestretchrect">
+            <property name="text">
+             <string>disable-stretchrect</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="box_disable_textures">
+            <property name="text">
+             <string>disable-textures</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="box_disable_shaders">
+            <property name="text">
+             <string>disable-shaders</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="box_only_8_bit">
+            <property name="text">
+             <string>only-8bit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="box_disable_texture_align">
+            <property name="text">
+             <string>disable-texture-align</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="box_force_power_of_2">
+            <property name="text">
+             <string>force-power-of-2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="box_texture_memory">
+            <property name="text">
+             <string>texture-memory</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QComboBox" name="texture_memory_combobox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <property name="currentText">
+             <string>default</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>default</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>default-pool</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>default-pool-shadow</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>managed</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>scratch</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>swap-discard</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>exact-backbuffer</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>
-   </widget>
-   <zorder>label_scaling</zorder>
-   <zorder>line</zorder>
-   <zorder>label_gamma</zorder>
-   <zorder>line_2</zorder>
-   <zorder>label_misc</zorder>
-   <zorder>line_3</zorder>
-   <zorder>formLayoutWidget</zorder>
-   <zorder>formLayoutWidget_2</zorder>
-   <zorder>formLayoutWidget_3</zorder>
-   <zorder>formLayoutWidget_4</zorder>
-   <zorder>video_settings_direct3d</zorder>
-  </widget>
-  <zorder>video_settings_opengl</zorder>
-  <zorder>textEdit</zorder>
-  <zorder>label_current_string</zorder>
-  <zorder>label_preset</zorder>
-  <zorder>label_video_output</zorder>
-  <zorder>video_settings_direct3d</zorder>
-  <zorder>horizontalLayoutWidget</zorder>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_preset">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>

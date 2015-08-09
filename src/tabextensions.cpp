@@ -17,12 +17,14 @@ tabExtensions::tabExtensions(QWidget *parent) :
 void tabExtensions::addNewExtensionTab(){
     if(ui->valuebox_add_new_extension->text().startsWith(".")){
         QWidget* newTab = new QWidget();
-        QPlainTextEdit* textEditor = new QPlainTextEdit(newTab);
-        textEditor->setGeometry(80,90,500,260);
+        QGridLayout* grid = new QGridLayout();
+        newTab->setLayout(grid);
         QLabel* nameLabel = new QLabel("Name:", newTab);
-        nameLabel->setGeometry(80,30,51,16);
+         grid->addWidget(nameLabel, 0, 0);
         QLabel* actualName = new QLabel(ui->valuebox_add_new_extension->text(), newTab);
-        actualName->setGeometry(140,30,80,16);
+         grid->addWidget(actualName, 0, 1);
+        QPlainTextEdit* textEditor = new QPlainTextEdit(newTab);
+        grid->addWidget(textEditor, 1, 0, 1, 0);
         ui->tabWidget->addTab(newTab, ui->valuebox_add_new_extension->text());
         settingMap->insert(actualName->text(), textEditor);
         ui->valuebox_add_new_extension->clear();

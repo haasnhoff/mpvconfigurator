@@ -13,252 +13,221 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QRadioButton" name="radio_no_osc">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>50</y>
-     <width>102</width>
-     <height>20</height>
-    </rect>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>100</number>
    </property>
-   <property name="text">
-    <string>no-osc</string>
+   <property name="rightMargin">
+    <number>100</number>
    </property>
-   <property name="autoExclusive">
-    <bool>true</bool>
+   <property name="horizontalSpacing">
+    <number>30</number>
    </property>
-  </widget>
-  <widget class="QGraphicsView" name="graphicsView_top_bar_osc">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>400</y>
-     <width>430</width>
-     <height>235</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QGraphicsView" name="graphicsview_box_osc">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>90</y>
-     <width>430</width>
-     <height>235</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radio_preset_2">
-   <property name="geometry">
-    <rect>
-     <x>660</x>
-     <y>350</y>
-     <width>131</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Bottombar OSC</string>
-   </property>
-   <property name="autoExclusive">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radio_preset_4">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>680</y>
-     <width>131</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>SlimBox OSC</string>
-   </property>
-   <property name="autoExclusive">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QGraphicsView" name="graphicsView_slim_box_osc">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>400</y>
-     <width>430</width>
-     <height>235</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radio_preset_1">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>350</y>
-     <width>151</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Classic 'box' OSC</string>
-   </property>
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="autoRepeat">
-    <bool>false</bool>
-   </property>
-   <property name="autoExclusive">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radio_preset_3">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>680</y>
-     <width>131</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Topbar OSC</string>
-   </property>
-   <property name="autoExclusive">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QGraphicsView" name="graphicsView_bottombar_osc">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>90</y>
-     <width>430</width>
-     <height>235</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_osc_settings">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>10</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>OSC settings:</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line_2">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>30</y>
-     <width>118</width>
-     <height>3</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>700</y>
-     <width>781</width>
-     <height>121</height>
-    </rect>
-   </property>
-   <widget class="QLabel" name="label_seekbar_settings">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>10</y>
-      <width>121</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Seekbar settings:</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radio_seekbar_bar">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>90</y>
-      <width>121</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Seekbar - Bar</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-    <property name="autoExclusive">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radio_seekbar_diamond">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>90</y>
-      <width>161</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Seekbar - Diamond</string>
-    </property>
-    <property name="autoExclusive">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView_seekbar_bar">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>40</y>
-      <width>210</width>
-      <height>45</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView_seekbar_diamond">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>40</y>
-      <width>210</width>
-      <height>45</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="Line" name="line">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>30</y>
-      <width>141</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-  </widget>
+   <item row="5" column="0" colspan="6">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_seekbar_settings">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Seekbar settings:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGraphicsView" name="graphicsView_seekbar_bar">
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QGraphicsView" name="graphicsView_seekbar_diamond">
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QRadioButton" name="radio_seekbar_bar">
+        <property name="text">
+         <string>Seekbar - Bar</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QRadioButton" name="radio_seekbar_diamond">
+        <property name="text">
+         <string>Seekbar - Diamond</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="3" colspan="6">
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="4" column="5">
+       <widget class="QRadioButton" name="radio_preset_4">
+        <property name="text">
+         <string>SlimBox OSC</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="5">
+       <widget class="QRadioButton" name="radio_preset_2">
+        <property name="text">
+         <string>Bottombar OSC</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="4">
+       <widget class="QGraphicsView" name="graphicsview_box_osc"/>
+      </item>
+      <item row="3" column="0" colspan="4">
+       <widget class="QGraphicsView" name="graphicsView_top_bar_osc"/>
+      </item>
+      <item row="2" column="0">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="6">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="3">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="2">
+       <widget class="QRadioButton" name="radio_preset_3">
+        <property name="text">
+         <string>Topbar OSC</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4" colspan="3">
+       <widget class="QGraphicsView" name="graphicsView_bottombar_osc"/>
+      </item>
+      <item row="3" column="4" colspan="3">
+       <widget class="QGraphicsView" name="graphicsView_slim_box_osc"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QRadioButton" name="radio_preset_1">
+        <property name="text">
+         <string>Classic 'box' OSC</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="2">
+       <widget class="QRadioButton" name="radio_no_osc">
+        <property name="text">
+         <string>no-osc</string>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>

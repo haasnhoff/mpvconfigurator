@@ -6,8 +6,7 @@ tabScreenshot::tabScreenshot(QWidget *parent) :
     ui(new Ui::tabScreenshot)
 {
     ui->setupUi(this);    
-    ui->widget_jpeg_settings->hide();
-    ui->widget_png_settings->hide();
+    enablePNGandJPEGWidgets("Disable both!");
     ui->frame->hide();
     ui->label_custom_template->hide();
     ui->valuebox_custom_template->hide();
@@ -103,20 +102,20 @@ void tabScreenshot::addScreenshotSetting(QLineEdit* valueBox, QCheckBox* box) {
 // Clears all the file specific settings so that JPG won't suddenly have PNG settings or vice versa.
 void tabScreenshot::enablePNGandJPEGWidgets(QString changedTo){
     if(changedTo.compare("png") == 0){
-        ui->widget_jpeg_settings->setHidden(true);
-        ui->widget_png_settings->setHidden(false);
+        ui->widget_jpeg_settings->setDisabled(true);
+        ui->widget_png_settings->setDisabled(false);
         ui->box_screenshot_jpeg_quality->setChecked(false);
         ui->box_screenshot_jpeg_source_chroma->setChecked(false);
     }
     else if(changedTo.compare("jpg") == 0){
-        ui->widget_jpeg_settings->setHidden(false);
-        ui->widget_png_settings->setHidden(true);
+        ui->widget_jpeg_settings->setDisabled(false);
+        ui->widget_png_settings->setDisabled(true);
         ui->box_screenshot_png_compression->setChecked(false);
         ui->box_screenshot_png_filter->setChecked(false);
     }
     else{
-        ui->widget_jpeg_settings->setHidden(true);
-        ui->widget_png_settings->setHidden(true);
+        ui->widget_jpeg_settings->setDisabled(true);
+        ui->widget_png_settings->setDisabled(true);
         ui->box_screenshot_png_compression->setChecked(false);
         ui->box_screenshot_png_filter->setChecked(false);
         ui->box_screenshot_jpeg_quality->setChecked(false);

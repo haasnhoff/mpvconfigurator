@@ -52,7 +52,8 @@ FORMS    += mainwindow.ui \
     tabmisc.ui \
     tabextensions.ui \
     unknownsettingstab.ui \
-    tabconfig.ui
+    tabconfig.ui \
+    tempfix.ui
 
 QMAKE_CXXFLAGS += -std=c++11
 
@@ -65,4 +66,4 @@ QMAKE_LFLAGS += -lc++
 RESOURCES = resources.qrc
 
 RC_FILE = icon_windows.rc       # Windows Icon
-ICON = ./images/icon.icns       # OS X Icon
+ICON = images/icon.icns       # OS X Icon

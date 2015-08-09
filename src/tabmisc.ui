@@ -13,501 +13,462 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_misc_settings">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>40</y>
-     <width>161</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Miscellaneous settings:</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>60</y>
-     <width>181</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QWidget" name="formLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>130</y>
-     <width>411</width>
-     <height>321</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout">
-    <property name="labelAlignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-    <property name="horizontalSpacing">
-     <number>30</number>
-    </property>
-    <property name="verticalSpacing">
-     <number>15</number>
-    </property>
-    <property name="topMargin">
-     <number>10</number>
-    </property>
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="box_ytdl_format">
-      <property name="text">
-       <string>ytdl-format</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QComboBox" name="comboBox_ytdl_format">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="editable">
-       <bool>true</bool>
-      </property>
-      <item>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="6" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="2">
+    <layout class="QFormLayout" name="networkLayout">
+     <property name="labelAlignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="horizontalSpacing">
+      <number>30</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>15</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item row="1" column="0">
+      <widget class="QCheckBox" name="box_network_timeout">
        <property name="text">
-        <string>bestvideo+bestaudio</string>
+        <string>network-timeout</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="valuebox_network_timeout">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QCheckBox" name="box_hls_bitrate">
        <property name="text">
-        <string>133+bestaudio</string>
+        <string>hls-bitrate</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboBox_hls_bitrate">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>&lt;rate&gt;</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>no</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>min</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>max</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_network_settings">
        <property name="text">
-        <string>134+bestaudio</string>
+        <string>Network Settings:</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0" rowspan="3">
+    <layout class="QFormLayout" name="formLayout">
+     <property name="labelAlignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="horizontalSpacing">
+      <number>30</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>15</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item row="1" column="0">
+      <widget class="QCheckBox" name="box_ytdl_format">
        <property name="text">
-        <string>135+bestaudio</string>
+        <string>ytdl-format</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="comboBox_ytdl_format">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>bestvideo+bestaudio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>133+bestaudio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>134+bestaudio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>135+bestaudio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>136+bestaudio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>137+bestaudio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>138+bestaudio</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>139+bestaudio</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QCheckBox" name="box_save_position_on_quit">
        <property name="text">
-        <string>136+bestaudio</string>
+        <string>save-position-on-quit</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QCheckBox" name="box_priority">
        <property name="text">
-        <string>137+bestaudio</string>
+        <string>priority</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="comboBox_priority">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>idle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>belownormal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>normal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>abovenormal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>high</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>realtime</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QCheckBox" name="box_force_seekable">
        <property name="text">
-        <string>138+bestaudio</string>
+        <string>force-seekable</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="comboBox_force_seekable">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>yes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>no</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QCheckBox" name="box_cdrom_device">
        <property name="text">
-        <string>139+bestaudio</string>
+        <string>cdrom-device</string>
        </property>
-      </item>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="box_save_position_on_quit">
-      <property name="text">
-       <string>save-position-on-quit</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="box_priority">
-      <property name="text">
-       <string>priority</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_priority">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <item>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="valuebox_cdrom_device">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="button_browse_cdrom">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="text">
-        <string>idle</string>
+        <string>Browse...</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QCheckBox" name="box_heartbeat_cmd">
        <property name="text">
-        <string>belownormal</string>
+        <string>heartbeat-cmd</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="valuebox_heartbeat_cmd">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QCheckBox" name="box_heartbeat_interval">
        <property name="text">
-        <string>normal</string>
+        <string>heartbeat-interval</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="valuebox_heartbeat_interval">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_general">
        <property name="text">
-        <string>abovenormal</string>
+        <string>General misc settings:</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="2">
+    <layout class="QFormLayout" name="cacheLayout">
+     <property name="labelAlignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="horizontalSpacing">
+      <number>30</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>15</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item row="2" column="0">
+      <widget class="QCheckBox" name="box_cache">
        <property name="text">
-        <string>high</string>
+        <string>cache</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboBox_cache">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>auto</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>&lt;kBytes&gt;</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>yes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>no</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QCheckBox" name="box_cache_default">
+       <property name="accessibleName">
+        <string/>
+       </property>
        <property name="text">
-        <string>realtime</string>
+        <string>cache-default</string>
        </property>
-      </item>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="box_force_seekable">
-      <property name="text">
-       <string>force-seekable</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QComboBox" name="comboBox_force_seekable">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <item>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="comboBox_cache_default">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>&lt;kBytes&gt;</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>no</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QCheckBox" name="box_cache_initial">
        <property name="text">
-        <string>yes</string>
+        <string>cache-initial</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="valuebox_cache_initial">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QCheckBox" name="box_cache_seek_min">
        <property name="text">
-        <string>no</string>
+        <string>cache-seek-min</string>
        </property>
-      </item>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QCheckBox" name="box_cdrom_device">
-      <property name="text">
-       <string>cdrom-device</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="valuebox_cdrom_device">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QPushButton" name="button_browse_cdrom">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="text">
-       <string>Browse...</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QCheckBox" name="box_heartbeat_cmd">
-      <property name="text">
-       <string>heartbeat-cmd</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="valuebox_heartbeat_cmd">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QCheckBox" name="box_heartbeat_interval">
-      <property name="text">
-       <string>heartbeat-interval</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QLineEdit" name="valuebox_heartbeat_interval">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="formLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>130</y>
-     <width>311</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="cacheLayout">
-    <property name="labelAlignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-    <property name="horizontalSpacing">
-     <number>30</number>
-    </property>
-    <property name="verticalSpacing">
-     <number>15</number>
-    </property>
-    <property name="topMargin">
-     <number>10</number>
-    </property>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="box_cache">
-      <property name="text">
-       <string>cache</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QComboBox" name="comboBox_cache">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="editable">
-       <bool>true</bool>
-      </property>
-      <item>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="valuebox_cache_seek_min">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QCheckBox" name="box_no_cache">
        <property name="text">
-        <string>auto</string>
+        <string>no-cache</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QCheckBox" name="box_cache_secs">
        <property name="text">
-        <string>&lt;kBytes&gt;</string>
+        <string>cache-secs</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="valuebox_cache_secs">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QCheckBox" name="box_no_cache_pause">
        <property name="text">
-        <string>yes</string>
+        <string>no-cache-pause</string>
        </property>
-      </item>
-      <item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_cache_settings">
        <property name="text">
-        <string>no</string>
+        <string>Cache settings:</string>
        </property>
-      </item>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="box_cache_default">
-      <property name="accessibleName">
-       <string/>
-      </property>
-      <property name="text">
-       <string>cache-default</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_cache_default">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="editable">
-       <bool>true</bool>
-      </property>
-      <item>
-       <property name="text">
-        <string>&lt;kBytes&gt;</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>no</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="box_cache_initial">
-      <property name="text">
-       <string>cache-initial</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="valuebox_cache_initial">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QCheckBox" name="box_cache_seek_min">
-      <property name="text">
-       <string>cache-seek-min</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="valuebox_cache_seek_min">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="box_no_cache">
-      <property name="text">
-       <string>no-cache</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QCheckBox" name="box_cache_secs">
-      <property name="text">
-       <string>cache-secs</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="valuebox_cache_secs">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QCheckBox" name="box_no_cache_pause">
-      <property name="text">
-       <string>no-cache-pause</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="formLayoutWidget_3">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>440</y>
-     <width>311</width>
-     <height>171</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="networkLayout">
-    <property name="labelAlignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-    <property name="horizontalSpacing">
-     <number>30</number>
-    </property>
-    <property name="verticalSpacing">
-     <number>15</number>
-    </property>
-    <property name="topMargin">
-     <number>10</number>
-    </property>
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="box_network_timeout">
-      <property name="text">
-       <string>network-timeout</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="valuebox_network_timeout">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="box_hls_bitrate">
-      <property name="text">
-       <string>hls-bitrate</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QComboBox" name="comboBox_hls_bitrate">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="editable">
-       <bool>true</bool>
-      </property>
-      <item>
-       <property name="text">
-        <string>&lt;rate&gt;</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>no</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>min</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>max</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QLabel" name="label_general">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>100</y>
-     <width>181</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>General misc settings:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_cache_settings">
-   <property name="geometry">
-    <rect>
-     <x>640</x>
-     <y>100</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Cache settings:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_network_settings">
-   <property name="geometry">
-    <rect>
-     <x>650</x>
-     <y>410</y>
-     <width>121</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Network Settings:</string>
-   </property>
-  </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="label_misc_settings">
+     <property name="text">
+      <string>Miscellaneous settings:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>

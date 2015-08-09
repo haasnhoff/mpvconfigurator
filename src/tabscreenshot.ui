@@ -13,935 +13,81 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_screenshot_settings">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>20</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Screenshot settings:</string>
-   </property>
-  </widget>
-  <widget class="Line" name="line">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>40</y>
-     <width>171</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-  </widget>
-  <widget class="QWidget" name="formLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>90</y>
-     <width>481</width>
-     <height>241</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="general_screenshot_settings">
-    <property name="labelAlignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-    <property name="horizontalSpacing">
-     <number>10</number>
-    </property>
-    <property name="verticalSpacing">
-     <number>-1</number>
-    </property>
-    <property name="topMargin">
-     <number>10</number>
-    </property>
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="box_screenshot_format">
-      <property name="text">
-       <string>screenshot-format</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QComboBox" name="comboBox_screenshot_format">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <item>
-       <property name="text">
-        <string>tga</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>ppm</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>pgm</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>pgmyuv</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>jpg</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="box_screenshot_tag_colorspace">
-      <property name="text">
-       <string>screenshot-tag-colorspace</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QComboBox" name="comboBox_screenshot_tag_colorspace">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <item>
-       <property name="text">
-        <string>yes</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>no</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="box_screenshot_high_bit_depth">
-      <property name="text">
-       <string>screenshot-high-bit-depth</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_screenshot_high_bit_depth">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <item>
-       <property name="text">
-        <string>yes</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>no</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="box_screenshot_directory">
-      <property name="text">
-       <string>screenshot-directory</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="valuebox_screenshot_directory">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QPushButton" name="browse_button">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="text">
-       <string>Browse</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="Line" name="line_2">
-      <property name="windowModality">
-       <enum>Qt::NonModal</enum>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>10</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>190</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QCheckBox" name="box_screenshot_template">
-      <property name="text">
-       <string>screenshot-template</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QComboBox" name="combobox_screenshot_template">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>280</width>
-        <height>0</height>
-       </size>
-      </property>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-31-12-15-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-12-31-15-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-31-12-15-at-02:25-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-12-31-15-at-02:25-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-screenshot-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-screenshot-31-12-15-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-screenshot-12-31-15-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-screenshot-31-12-15-at-02:25-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>No_Game_No_Life_ep01-screenshot-12-31-15-at-02:25-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>mpv-screenshot-31-12-15-at-02:25-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>mpv-screenshot-12-31-15-at-02:25-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>mpv-screenshot-31-12-15-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>mpv-screenshot-12-31-15-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>mpv-screenshot-001.png</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Custom</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QLineEdit" name="valuebox_custom_template">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>270</width>
-        <height>0</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="label_custom_template">
-      <property name="text">
-       <string>Custom template:</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QFrame" name="frame">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>340</y>
-     <width>551</width>
-     <height>461</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QWidget" name="formLayoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>511</width>
-      <height>421</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="template_guide_form">
-     <property name="labelAlignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-     <property name="formAlignment">
-      <set>Qt::AlignHCenter|Qt::AlignTop</set>
-     </property>
-     <property name="topMargin">
-      <number>0</number>
-     </property>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_template_guide">
-       <property name="text">
-        <string>Custom template guide: </string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="tempguide_sequence_number">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A sequence number, padded with zeros to length X (default: 04). E.g. passing the format %04n will yield 0012 on the 12th screenshot. The number is incremented every time a screenshot is taken or if the file already exists.&lt;/p&gt;&lt;p&gt;The length X must be in the range 0-9. With the optional # sign, mpv will use the lowest available number. For example, if you take three screenshots--0001, 0002, 0003--and delete the first two, the next two screenshots will not be 0004 and 0005, but 0001 and 0002 again.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>%[#][0X]n</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLabel" name="tempguide_directory_path">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>Directory path of the currently played video. If the video is not on the filesystem (but e.g. http://), this expand to an empty string.</string>
-       </property>
-       <property name="text">
-        <string>%x</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="tempguide_filename">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>Filename of the currently played video.</string>
-       </property>
-       <property name="text">
-        <string>%f</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QLabel" name="tempguide_directory_path_fallback">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>Same as %x, but if the video file is not on the filesystem, return the fallback string inside the {...}.</string>
-       </property>
-       <property name="text">
-        <string>%X{fallback}</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="tempguide_filename_stripped">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>Same as %f, but strip the file extension, including the dot.</string>
-       </property>
-       <property name="text">
-        <string>%F</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QLabel" name="tempguide_playback_time">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-         <strikeout>false</strikeout>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>Current playback time, in the same format as used in the OSD. The result is a string of the form &quot;HH:MM:SS&quot;. For example, if the video is at the time position 5 minutes and 34 seconds, %p will be replaced with &quot;00:05:34&quot;.</string>
-       </property>
-       <property name="text">
-        <string>%p</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="tempguide_fallback_prop">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Insert the value of the slave property 'prop'. E.g. %{filename} is the same as %f. If the property does not exist or is not available, an error text is inserted, unless a fallback is specified.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>%{prop[:fallback text]}</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QLabel" name="tempguide_local_date_time_extended">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Similar to %p, but extended with the playback time in milliseconds. It is formatted as &amp;quot;HH:MM:SS.mmm&amp;quot;, with &amp;quot;mmm&amp;quot; being the millisecond part of the playback time.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>%P</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="0">
-      <widget class="Line" name="line_3">
-       <property name="minimumSize">
-        <size>
-         <width>180</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="0">
-      <widget class="QLabel" name="label_time_format_specifiers">
-       <property name="text">
-        <string>Time format specifiers:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="0">
-      <widget class="QLabel" name="tempguide_specify_hour">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>hour (padded with 0 to two digits)</string>
-       </property>
-       <property name="text">
-        <string>%wH</string>
-       </property>
-      </widget>
-     </item>
-     <item row="9" column="1">
-      <widget class="QLabel" name="tempguide_specify_minute">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>minutes (00-59)</string>
-       </property>
-       <property name="text">
-        <string>%wM</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="0">
-      <widget class="QLabel" name="tempguide_specify_hour_no_padding">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>hour (not padded)</string>
-       </property>
-       <property name="text">
-        <string>%wh</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="1">
-      <widget class="QLabel" name="tempguide_specify_minute_total">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>total minutes (includes hours, unlike %wM)</string>
-       </property>
-       <property name="text">
-        <string>%wm</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="0">
-      <widget class="QLabel" name="tempguide_specify_seconds">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>seconds (00-59)</string>
-       </property>
-       <property name="text">
-        <string>%wS</string>
-       </property>
-      </widget>
-     </item>
-     <item row="11" column="1">
-      <widget class="QLabel" name="tempguide_specify_seconds_float">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>like %ws, but as float</string>
-       </property>
-       <property name="text">
-        <string>%wf</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="0">
-      <widget class="QLabel" name="tempguide_specify_seconds_total">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>total seconds (includes hours and minutes)</string>
-       </property>
-       <property name="text">
-        <string>%ws</string>
-       </property>
-      </widget>
-     </item>
-     <item row="12" column="1">
-      <widget class="QLabel" name="tempguide_specify_milliseconds">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>milliseconds (000-999)</string>
-       </property>
-       <property name="text">
-        <string>%wT</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="0">
-      <widget class="QLabel" name="tempguide_local_date_time_format">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the current local date/time using the format X. This format specifier uses the UNIX strftime() function internally, and inserts the result of passing &amp;quot;%X&amp;quot; to strftime. &lt;/p&gt;&lt;p&gt;For example, %tm will insert the number of the current month as number. You have to use multiple %tX specifiers to build a full date/time string.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>%tX</string>
-       </property>
-      </widget>
-     </item>
-     <item row="13" column="1">
-      <widget class="QLabel" name="tempguide_percent_percent">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-         <underline>true</underline>
-        </font>
-       </property>
-       <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Replaced with the % character itself.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>%%</string>
-       </property>
-      </widget>
-     </item>
-     <item row="15" column="0">
-      <widget class="QLabel" name="label_guide_example">
-       <property name="text">
-        <string>Example:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="17" column="0">
-      <widget class="QLabel" name="tempguide_example2_format">
-       <property name="text">
-        <string>%f-screenshot-%td-%tm-%ty-at-%tH.%tM-%n</string>
-       </property>
-      </widget>
-     </item>
-     <item row="18" column="0">
-      <widget class="QLabel" name="tempguide_example2_converted">
-       <property name="text">
-        <string>[File]-screenshot-[day]-[month]-[year]-at-[hour]:[minute]-001.png</string>
-       </property>
-      </widget>
-     </item>
-     <item row="14" column="0">
-      <widget class="Line" name="line_6">
-       <property name="minimumSize">
-        <size>
-         <width>200</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="widget_png_settings" native="true">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>70</y>
-     <width>460</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <widget class="QWidget" name="formLayoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>411</width>
-      <height>138</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_3">
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0" rowspan="2">
+    <layout class="QFormLayout" name="formLayout">
      <property name="labelAlignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
      <property name="horizontalSpacing">
-      <number>30</number>
+      <number>-1</number>
      </property>
      <property name="verticalSpacing">
-      <number>15</number>
+      <number>-1</number>
      </property>
      <property name="topMargin">
       <number>10</number>
      </property>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="box_screenshot_png_compression">
-       <property name="text">
-        <string>screenshot-png-compression</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QCheckBox" name="box_screenshot_png_filter">
-       <property name="text">
-        <string>screenshot-png-filter</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QComboBox" name="comboBox_png_filter">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <item>
-        <property name="text">
-         <string>0</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>4</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>5</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QComboBox" name="comboBox_png_compression">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <item>
-        <property name="text">
-         <string>0</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>4</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>5</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>6</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>7</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>8</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>9</string>
-        </property>
-       </item>
-      </widget>
-     </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="label_png_settings">
+      <widget class="QLabel" name="label_screenshot_settings">
        <property name="text">
-        <string>PNG settings:</string>
+        <string>Screenshot settings:</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="Line" name="line_4">
-       <property name="minimumSize">
-        <size>
-         <width>150</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="widget_jpeg_settings" native="true">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>70</y>
-     <width>460</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <widget class="QWidget" name="formLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>411</width>
-      <height>142</height>
-     </rect>
-    </property>
-    <layout class="QFormLayout" name="formLayout_2">
-     <property name="labelAlignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-     <property name="horizontalSpacing">
-      <number>30</number>
-     </property>
-     <property name="verticalSpacing">
-      <number>15</number>
-     </property>
-     <property name="topMargin">
-      <number>10</number>
-     </property>
      <item row="2" column="0">
-      <widget class="QCheckBox" name="box_screenshot_jpeg_quality">
+      <widget class="QCheckBox" name="box_screenshot_format">
        <property name="text">
-        <string>screenshot-jpeg-quality</string>
+        <string>screenshot-format</string>
        </property>
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="valuebox_screenshot_jpeg_quality">
+      <widget class="QComboBox" name="comboBox_screenshot_format">
        <property name="enabled">
         <bool>false</bool>
        </property>
+       <item>
+        <property name="text">
+         <string>tga</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ppm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>pgm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>pgmyuv</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>jpg</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QCheckBox" name="box_screenshot_jpeg_source_chroma">
+      <widget class="QCheckBox" name="box_screenshot_tag_colorspace">
        <property name="text">
-        <string>screenshot-jpeg-source-chroma</string>
+        <string>screenshot-tag-colorspace</string>
        </property>
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QComboBox" name="comboBox_jpeg_source_chroma">
+      <widget class="QComboBox" name="comboBox_screenshot_tag_colorspace">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -957,8 +103,182 @@
        </item>
       </widget>
      </item>
+     <item row="4" column="0">
+      <widget class="QCheckBox" name="box_screenshot_high_bit_depth">
+       <property name="text">
+        <string>screenshot-high-bit-depth</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="comboBox_screenshot_high_bit_depth">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>yes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>no</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QCheckBox" name="box_screenshot_directory">
+       <property name="text">
+        <string>screenshot-directory</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="valuebox_screenshot_directory">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="browse_button">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QCheckBox" name="box_screenshot_template">
+       <property name="text">
+        <string>screenshot-template</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QComboBox" name="combobox_screenshot_template">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>280</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-31-12-15-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-12-31-15-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-31-12-15-at-02:25-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-12-31-15-at-02:25-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-screenshot-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-screenshot-31-12-15-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-screenshot-12-31-15-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-screenshot-31-12-15-at-02:25-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>No_Game_No_Life_ep01-screenshot-12-31-15-at-02:25-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mpv-screenshot-31-12-15-at-02:25-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mpv-screenshot-12-31-15-at-02:25-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mpv-screenshot-31-12-15-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mpv-screenshot-12-31-15-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mpv-screenshot-001.png</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Custom</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_custom_template">
+       <property name="text">
+        <string>Custom template:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="valuebox_custom_template">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>270</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
-      <widget class="Line" name="line_5">
+      <widget class="Line" name="line">
        <property name="minimumSize">
         <size>
          <width>150</width>
@@ -970,16 +290,643 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_jpeg_settings">
-       <property name="text">
-        <string notr="true">JPEG settings:</string>
-       </property>
-      </widget>
-     </item>
     </layout>
-   </widget>
-  </widget>
+   </item>
+   <item row="6" column="1">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0" rowspan="4">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="1" column="0">
+       <layout class="QFormLayout" name="template_guide_form">
+        <property name="labelAlignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+        <property name="formAlignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_template_guide">
+          <property name="text">
+           <string>Custom template guide: </string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="tempguide_sequence_number">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A sequence number, padded with zeros to length X (default: 04). E.g. passing the format %04n will yield 0012 on the 12th screenshot. The number is incremented every time a screenshot is taken or if the file already exists.&lt;/p&gt;&lt;p&gt;The length X must be in the range 0-9. With the optional # sign, mpv will use the lowest available number. For example, if you take three screenshots--0001, 0002, 0003--and delete the first two, the next two screenshots will not be 0004 and 0005, but 0001 and 0002 again.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>%[#][0X]n</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="tempguide_directory_path">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Directory path of the currently played video. If the video is not on the filesystem (but e.g. http://), this expand to an empty string.</string>
+          </property>
+          <property name="text">
+           <string>%x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="tempguide_filename">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Filename of the currently played video.</string>
+          </property>
+          <property name="text">
+           <string>%f</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="tempguide_directory_path_fallback">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Same as %x, but if the video file is not on the filesystem, return the fallback string inside the {...}.</string>
+          </property>
+          <property name="text">
+           <string>%X{fallback}</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="tempguide_filename_stripped">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Same as %f, but strip the file extension, including the dot.</string>
+          </property>
+          <property name="text">
+           <string>%F</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="tempguide_playback_time">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+            <strikeout>false</strikeout>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Current playback time, in the same format as used in the OSD. The result is a string of the form &quot;HH:MM:SS&quot;. For example, if the video is at the time position 5 minutes and 34 seconds, %p will be replaced with &quot;00:05:34&quot;.</string>
+          </property>
+          <property name="text">
+           <string>%p</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="tempguide_fallback_prop">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Insert the value of the slave property 'prop'. E.g. %{filename} is the same as %f. If the property does not exist or is not available, an error text is inserted, unless a fallback is specified.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>%{prop[:fallback text]}</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLabel" name="tempguide_local_date_time_extended">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Similar to %p, but extended with the playback time in milliseconds. It is formatted as &amp;quot;HH:MM:SS.mmm&amp;quot;, with &amp;quot;mmm&amp;quot; being the millisecond part of the playback time.&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>%P</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="Line" name="line_3">
+          <property name="minimumSize">
+           <size>
+            <width>180</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_time_format_specifiers">
+          <property name="text">
+           <string>Time format specifiers:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="tempguide_specify_hour">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>hour (padded with 0 to two digits)</string>
+          </property>
+          <property name="text">
+           <string>%wH</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QLabel" name="tempguide_specify_minute">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>minutes (00-59)</string>
+          </property>
+          <property name="text">
+           <string>%wM</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="tempguide_specify_hour_no_padding">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>hour (not padded)</string>
+          </property>
+          <property name="text">
+           <string>%wh</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QLabel" name="tempguide_specify_minute_total">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>total minutes (includes hours, unlike %wM)</string>
+          </property>
+          <property name="text">
+           <string>%wm</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="tempguide_specify_seconds">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>seconds (00-59)</string>
+          </property>
+          <property name="text">
+           <string>%wS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QLabel" name="tempguide_specify_seconds_float">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>like %ws, but as float</string>
+          </property>
+          <property name="text">
+           <string>%wf</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QLabel" name="tempguide_specify_seconds_total">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>total seconds (includes hours and minutes)</string>
+          </property>
+          <property name="text">
+           <string>%ws</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QLabel" name="tempguide_specify_milliseconds">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>milliseconds (000-999)</string>
+          </property>
+          <property name="text">
+           <string>%wT</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="tempguide_local_date_time_format">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Specify the current local date/time using the format X. This format specifier uses the UNIX strftime() function internally, and inserts the result of passing &amp;quot;%X&amp;quot; to strftime. &lt;/p&gt;&lt;p&gt;For example, %tm will insert the number of the current month as number. You have to use multiple %tX specifiers to build a full date/time string.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>%tX</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="QLabel" name="tempguide_percent_percent">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Replaced with the % character itself.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>%%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="0">
+         <widget class="QLabel" name="label_guide_example">
+          <property name="text">
+           <string>Example:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="0">
+         <widget class="QLabel" name="tempguide_example2_format">
+          <property name="text">
+           <string>%f-screenshot-%td-%tm-%ty-at-%tH.%tM-%n</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="0">
+         <widget class="QLabel" name="tempguide_example2_converted">
+          <property name="text">
+           <string>[File]-screenshot-[day]-[month]-[year]-at-[hour]:[minute]-001.png</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="0">
+         <widget class="Line" name="line_6">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QWidget" name="widget_jpeg_settings" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="rightMargin">
+       <number>70</number>
+      </property>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboBox_jpeg_source_chroma">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>yes</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>no</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="Line" name="line_5">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="box_screenshot_jpeg_quality">
+        <property name="text">
+         <string>screenshot-jpeg-quality</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="box_screenshot_jpeg_source_chroma">
+        <property name="text">
+         <string>screenshot-jpeg-source-chroma</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_jpeg_settings">
+        <property name="text">
+         <string notr="true">JPEG settings:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="valuebox_screenshot_jpeg_quality">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QWidget" name="widget_png_settings" native="true">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <property name="rightMargin">
+       <number>70</number>
+      </property>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboBox_png_filter">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QCheckBox" name="box_screenshot_png_compression">
+        <property name="text">
+         <string>screenshot-png-compression</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="comboBox_png_compression">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_png_settings">
+        <property name="text">
+         <string>PNG settings:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="box_screenshot_png_filter">
+        <property name="text">
+         <string>screenshot-png-filter</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="Line" name="line_4">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>

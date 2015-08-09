@@ -21,7 +21,7 @@ Currently, mpv Configurator is in beta. This means it's not very optimized and m
 
 Pre-compiled binaries for mpv Configurator can be found in the [releases section](https://github.com/haasnhoff/mpvconfigurator/releases)
 
-Currently only betas are available. The configurator will be slated for 1.0 release when it has been properly tested, updating manuals feature, scaling UI are added and tooltips are fixed.
+Currently only betas are available. The configurator will be slated for 1.0 release when it has been properly tested, updating manuals feature and tooltips are fixed.
 
 **Note for GNU/Linux users:**
 
@@ -34,10 +34,6 @@ I might statically build the GNU/Linux binary later on for easier deployment, bu
 **Are you affiliated with the mpv guys?**
 
 No.
-
-**Your GUI looks like shit in [platform], it doesn't even scale and is hard to use on my 1024x600 screen.**
-
-This is a very well known problem. Might be fixed later on.
 
 **Some tooltips aren't working as inteded. Comboboxes should have tooltips.**
 

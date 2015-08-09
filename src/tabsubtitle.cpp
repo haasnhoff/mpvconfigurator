@@ -68,7 +68,7 @@ tabsubtitle::tabsubtitle(QWidget *parent) :
     testShadow = new QGraphicsDropShadowEffect();
     updateTestText(0);                                                  // Updates the shown subtitle in the GraphicsScene.
     subtitleScene->addItem(testSubtitle);
-    subtitleScene->setSceneRect(0,0,700,100);                           // Very specific boundaries. Should maybe fix?
+    //subtitleScene->setSceneRect(0,0,700,100);                           // Very specific boundaries. Should maybe fix?
 }
 
 void tabsubtitle::parseToConf(QStringList* conf){

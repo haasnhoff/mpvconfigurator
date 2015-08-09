@@ -32,18 +32,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tabWidget->addTab(tabextensions, "Extensions");
     ui->tabWidget->addTab(tabunknown, "Unknown Settings");
     ui->tabWidget->setStyleSheet("QTabBar::tab:hover { color: black; background: #e3e3e3 }"
-                                "QTabBar::tab:selected { color: white; background: #722b72; }");        // Purple tab color.
-    setWindowTitle("mpv Configurator Beta 0.1");
+                                "QTabBar::tab:selected { color: white; background: #722b72; }");   // Purple tab color.
+    setWindowTitle("mpv Configurator Beta 0.2");
     connect(ui->actionNew, SIGNAL(triggered(bool)), this, SLOT(deleteAllSettings(bool)));
     connect(ui->actionOpen_2, SIGNAL(triggered()), this, SLOT(readFullConf()));
     connect(ui->actionSave_2, SIGNAL(triggered()), this, SLOT(parseFullConf()));
     connect(ui->actionSave_as_2, SIGNAL(triggered()), this, SLOT(saveAs()));
     connect(ui->action_Bar_Exit, SIGNAL(triggered()), this, SLOT(messageClose()));
     savedConf = new QFile();
+
+    windowSettings = new QSettings();                                                              // Needs to be to new to be called from destructor.
+    QByteArray tempArray = windowSettings->value("state/window/geometry").toByteArray();
+    if (!tempArray.isEmpty()) {
+        this->restoreGeometry(tempArray);
+    }
 }
 
 void MainWindow::deleteAllSettings(bool withMessage){
-    if(!withMessage){                                                                                   // Ask before delete
+    if(!withMessage){                                                                              // Ask before delete
         QMessageBox msgBox;
         msgBox.setText("All settings will be discarded.");
         msgBox.setInformativeText("Are you sure you want to start on a new config?");
@@ -220,7 +226,9 @@ void MainWindow::readFullConf(){
 }
 
 MainWindow::~MainWindow()
-{   // Cannot be comma'd due to operator precedence.
+{
+    windowSettings->setValue("state/window/geometry", this->saveGeometry());
+    // Cannot be comma'd due to operator precedence.
     delete tabAudio; delete tabConfig; delete tabextensions;
     delete tabmisc; delete tabOSC; delete tabOSD; delete tabscreenshot;
     delete tabSubtitle; delete tabunknown; delete tabvideo; delete tabwindow;

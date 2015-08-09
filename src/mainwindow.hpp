@@ -15,6 +15,7 @@
 #include "tabmisc.hpp"
 #include "tabextensions.hpp"
 #include "unknownsettingstab.hpp"
+#include <QSettings>
 
 namespace Ui {
 class MainWindow;
@@ -40,6 +41,7 @@ public:
     tabExtensions* tabextensions;
     unknownsettingstab* tabunknown;
     QFile* savedConf;
+    QSettings* windowSettings;
 
     QString parseSetting();
     QString parseComboboxSetting(QString* settingName, QObject* objectToChange);
