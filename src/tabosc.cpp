@@ -54,7 +54,7 @@ void tabosc::parseToConf(QStringList* conf){
         toBeAdded.append("script-opts=osc-layout=box,");
 
     if(!ui->radio_no_osc->isChecked() && ui->radio_seekbar_diamond->isChecked())
-        toBeAdded.append("osc-seekbarstyle=diamond");
+        toBeAdded.append("osc-seekbarstyle=slider");
     else if(!ui->radio_no_osc->isChecked())
         toBeAdded.append("osc-seekbarstyle=bar");
 
@@ -75,7 +75,7 @@ void tabosc::readFromConf(QString conf){
     else
         ui->radio_preset_1->setChecked(true);
 
-    if(conf.contains("seekbarstyle=diamond"))
+    if(conf.contains("seekbarstyle=slider"))
         ui->radio_seekbar_diamond->setChecked(true);
     else
         ui->radio_seekbar_bar->setChecked(true);
